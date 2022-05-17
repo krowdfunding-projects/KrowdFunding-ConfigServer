@@ -1,0 +1,18 @@
+server:
+  port: 9001 # configServer? ??? port??.
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8888/eureka
+
+
+spring:
+  application:
+    name: krowdfunding-ConfigServer
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/krowdfunding-projects/Krowdfunding-ConfigProperties
